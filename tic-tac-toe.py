@@ -16,15 +16,15 @@ while status == False:
     else:
         player = "X"
     counter += 1
-    walid = False
-    while walid == False:
-        position = int(input(player+"ваш код: "))
+    valid = False
+    while valid == False:
+        position = int(input(f"{player} ваш ход: "))
         if position in positions:
             
             print("эта позиция уже занята!")
         else:
             positions.append(position)
-            walid = True
+            valid = True
             playing_field [position-1] = player
     if counter > 4:
         for number_one,number_two,number_three in all_win_coords:
